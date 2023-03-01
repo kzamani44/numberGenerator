@@ -58,18 +58,21 @@
 //     }
 //     divCon.appendChild(nums)
 // }
-
-let divCon = document.querySelector('.container')
-divCon.style.display = "flex"
-divCon.style.justifyContent = 'center'
-divCon.style.gap = '3px'
-divCon.style.alignItems = 'center'
-divCon.style.flexWrap = 'wrap'
-divCon.style.width = '500px'
-divCon.style.height = 'fit-content'
-// divCon.style.backgroundColor = "#21BF73"
-divCon.style.margin = '30px auto'
-divCon.style.textAlign = 'center'
+const div = () => {
+    let divCon = document.querySelector('.container')
+    divCon.style.display = "flex"
+    divCon.style.justifyContent = 'center'
+    divCon.style.gap = '3px'
+    divCon.style.alignItems = 'center'
+    divCon.style.flexWrap = 'wrap'
+    divCon.style.width = '500px'
+    divCon.style.height = 'fit-content'
+    // divCon.style.backgroundColor = "#21BF73"
+    divCon.style.margin = '30px auto'
+    divCon.style.textAlign = 'center'
+    return divCon
+}
+console.log(div())
 // h1 header element DOM creation
 const header = () => {
     // Create Title (h1) element with content and attributes
@@ -80,4 +83,4 @@ const header = () => {
     // console.log(title)
     return title
 }
-divCon.appendChild(header())
+div().appendChild(header())
