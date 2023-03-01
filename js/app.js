@@ -61,6 +61,7 @@
 const div = () => {
     let divCon = document.querySelector('.container')
     divCon.style.display = "flex"
+    divCon.style.flexDirection = 'column'
     divCon.style.justifyContent = 'center'
     divCon.style.gap = '3px'
     divCon.style.alignItems = 'center'
@@ -72,7 +73,7 @@ const div = () => {
     divCon.style.textAlign = 'center'
     return divCon
 }
-console.log(div())
+
 // h1 header element DOM creation
 const header = () => {
     // Create Title (h1) element with content and attributes
@@ -84,3 +85,22 @@ const header = () => {
     return title
 }
 div().appendChild(header())
+
+const subHeader = () => {
+    let subTitle = document.createElement('h3');
+    let author = document.createElement('p')
+    subTitle.className = 'subtitle'
+    subTitle.textContent = '30DaysOfJavaScript'
+    subTitle.innerHTML = `<a href="#">${subTitle.textContent}</a>`
+    subTitle.style.fontWeight = '300'
+    subTitle.style.fontSize = '22px'
+
+    author.className = 'author'
+    author.textContent = 'Author: Kenneth Z Yashim'
+    author.innerHTML = `<a href="#">${author.textContent}</a>`
+    author.style.fontSize = '16px'
+    
+    div().appendChild(subTitle)
+    div().appendChild(author)
+}
+subHeader()
